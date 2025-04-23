@@ -1,6 +1,11 @@
+import Models.Book;
+import views.ViewConsole;
+
+import Controllers.BookController;
 public class App {
     public static void main(String[] args) throws Exception {
-
+        ViewConsole viewConsole=new ViewConsole();
+        BookController bookController=new BookController();
         Book[] books = {
                 new Book("Clean Code", 2008),
                 new Book("The Pragmatic Programmer", 1999),
@@ -33,6 +38,15 @@ public class App {
                 new Book("Deep Learning", 2016),
                 new Book("The Elements of Statistical Learning", 2001)
         };
+        viewConsole.mostrarLibro(books);
+        System.out.println("ORDENADO CON INSERCION: ");
+        bookController.sortByName(books);
+        viewConsole.mostrarLibro(books);
+        System.out.println("BUSCADO: ");
+        bookController.searchByName(books, "Operating System Concepts".toLowerCase());
+        
+
+        
 
     }
 }
