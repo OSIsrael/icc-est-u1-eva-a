@@ -21,10 +21,10 @@ public class BookController {
         int alto=libros.length-1;
         while (bajo<=alto) {
             int central=(bajo+alto)/2;
-            if ((libros[central].getName().compareTo(nombre))==0) {
+            if (libros[central].getName().equalsIgnoreCase(nombre)==true) {
                 return libros[central];
             }
-            if ((libros[central].getName().compareTo(nombre))!=0) {
+            if (libros[central].getName().equalsIgnoreCase(nombre)==false) {
                 bajo=central+1;
             }
             else{

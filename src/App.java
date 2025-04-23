@@ -43,7 +43,7 @@ public class App {
         bookController.sortByName(books);
         viewConsole.mostrarLibro(books);
         System.out.println("BUSCADO: ");
-        bookController.searchByName(books, "Operating System Concepts".toLowerCase());
+        bookController.searchByName(books, "Operating System Concepts");
         bookController.searchByName(books, "Python the best book");
 
         
