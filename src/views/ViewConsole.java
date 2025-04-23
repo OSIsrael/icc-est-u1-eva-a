@@ -7,6 +7,5 @@ public class ViewConsole {
         for (Book libro : books) {
             System.out.println(libro);
     }
-
 }
 }
